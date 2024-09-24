@@ -3,7 +3,6 @@ import { createClient } from "@/utils/supabase/server";
 import SignInComponent from "@/components/auth/signin";
 import { constructMetadata } from "@/lib/utils";
 import { Metadata } from "next/types";
-import { toast } from "sonner";
 
 export const metadata: Metadata = constructMetadata({
   title: "Sign In",
@@ -23,8 +22,8 @@ export default async function SignIn({ searchParams }: SignInProps) {
   const { data } = await supabase.auth.getUser();
 
   if (data?.user) {
-    if (searchParams.callback?.includes("://pearai.pearai/auth")) {
-      // Redirect to dashboard page with callback for desktop app
+    if (searchParams.callback?.includes("://mivro.mivro/auth")) {
+      // Redirect to the callback URL with the callback query param
       redirect("/dashboard?callback=" + searchParams.callback);
     } else {
       redirect("/");

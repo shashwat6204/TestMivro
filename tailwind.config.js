@@ -89,7 +89,7 @@ module.exports = {
         },
         beige: {
           100: "#FFFDFA",
-          200: "#FEFCFS", // This is the main color according to the image
+          200: "#FEFCFS",
           300: "#FEFDEC",
           400: "#FDF7E7",
           500: "#FDF6E3",
@@ -227,7 +227,10 @@ module.exports = {
             for (let i = 0; i <= 100; i += 5) {
               utilities[`.shadow-inset-${color}-${shade}-${i}`] = {
                 boxShadow: colorValue.includes("<alpha-value>")
-                  ? `inset 0 -1.5px 0 0 ${colorValue.replace("<alpha-value>", i / 100)}`
+                  ? `inset 0 -1.5px 0 0 ${colorValue.replace(
+                      "<alpha-value>",
+                      i / 100
+                    )}`
                   : `inset 0 -1.5px 0 0 ${colorValue}`,
               };
             }

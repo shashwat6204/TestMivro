@@ -9,7 +9,6 @@ interface NavLinkProps {
   children: React.ReactNode;
 }
 
-// NavLink component to handle individual navigation links
 const NavLink: React.FC<NavLinkProps> = ({
   href,
   isExternal = false,
@@ -38,29 +37,15 @@ const NavLink: React.FC<NavLinkProps> = ({
 const Navigation: React.FC = () => {
   const navLinks = [
     { label: "About", path: "/about", isExternal: false },
-        // Add the new Team link here
-        {
-          label: "Team",
-          path: "/team",
-          isExternal: false,
-          mobile: false,
-        },
-    {
-      label: "Discord",
-      path: "https://discord.gg/4CA58C7rkN",
-      isExternal: true,
-    },
-
+    { label: "Team", path: "/team", isExternal: false },
+    { label: "Resources", path: "https://discord.gg/4CA58C7rkN", isExternal: true },
   ];
 
   return (
     <nav className="flex w-full items-center justify-start md:justify-center">
       <ul className="flex w-full items-center justify-start space-x-3.5 sm:space-x-6 md:justify-center">
         {navLinks.map((link) => (
-          <li
-            className={`${link.mobile === false && "hidden sm:block"}`}
-            key={link.label}
-          >
+          <li key={link.label}>
             <NavLink href={link.path} isExternal={link.isExternal}>
               {link.label}
             </NavLink>

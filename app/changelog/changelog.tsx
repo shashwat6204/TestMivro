@@ -36,8 +36,8 @@ const updates: ChangelogEntry[] = [
       </ul>
     ),
     screenshot: {
-      src: "/images/shortcutBar- v.0.0.2.png",
-      alt: "Screenshot of Claude Sonnet Model and UI improvements",
+      src: "/images/v1.0.0.png",
+      alt: "Screenshot of official launch features",
       width: 300,
       height: 300,
     },
@@ -58,8 +58,8 @@ const updates: ChangelogEntry[] = [
       </ul>
     ),
     screenshot: {
-      src: "/images/includeFile - v.0.0.2.png",
-      alt: "Screenshot of initial launch features",
+      src: "/images/v0.0.1.png",
+      alt: "Screenshot of developer preview features",
       width: 300,
       height: 300,
     },

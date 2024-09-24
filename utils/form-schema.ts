@@ -11,15 +11,11 @@ export const passwordSchema = z.object({
 });
 
 export const signUpSchema = z.object({
-  full_name: z
+  name: z
     .string()
     .min(1, { message: "Name is required." })
     .max(100, { message: "Name is too long." }),
   email: emailSchema.shape.email,
-  company_name: z
-    .string()
-    .max(100, { message: "Company name is too long." })
-    .optional(),
   password: passwordSchema.shape.password,
 });
 

@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { CONTACT_EMAIL } from "@/utils/constants";
-
 export default function PrivacyPolicyComponent() {
   return (
     <section>
@@ -17,9 +14,8 @@ export default function PrivacyPolicyComponent() {
             </h1>
             <div className="text-base font-normal">
               <p>
-                As an open source hobby project, we do not have a privacy policy
-                at the moment. We are too busy having fun creating—stay tuned!
-                🎨🔍
+                As an open source hobby project, we don’t have Privacy Policy at
+                the moment. We’re too busy having fun creating—stay tuned! 🎨🔍
               </p>
             </div>
           </div>

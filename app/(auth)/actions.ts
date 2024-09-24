@@ -15,7 +15,7 @@ import { getURL } from "@/lib/utils";
 
 export async function signin(
   formData: FormData,
-  callbackForDesktopApp: string,
+  callbackForDesktopApp: string
 ) {
   const supabase = createClient();
 
@@ -35,7 +35,7 @@ export async function signin(
   if (callbackForDesktopApp && res) {
     // if login in from desktop app
     return redirect(
-      `/dashboard?callback=${encodeURIComponent(callbackForDesktopApp)}`,
+      `/dashboard?callback=${encodeURIComponent(callbackForDesktopApp)}`
     );
   }
   redirect(`/dashboard`);
@@ -57,8 +57,7 @@ export async function signup(formData: FormData) {
     password: formData.get("password") as string,
     options: {
       data: {
-        full_name: formData.get("full-name") as string,
-        company_name: formData.get("company-name") as string,
+        name: formData.get("name") as string,
       },
     },
   };
@@ -90,7 +89,7 @@ export async function signup(formData: FormData) {
 // OAuth sign-in with Google or GitHub
 export async function signinWithOAuth(
   provider: Provider,
-  callbackForDesktopApp: string | string[] = "",
+  callbackForDesktopApp: string | string[] = ""
 ) {
   const supabase = createClient();
 
@@ -157,7 +156,7 @@ export async function updateUser(formData: UpdatePasswordFormData) {
   redirect("/dashboard");
 }
 
-// resend confirmation email
+// Resend confirmation email
 export async function resendConfirmationEmail(email: string) {
   const supabase = createClient();
 

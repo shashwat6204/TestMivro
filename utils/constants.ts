@@ -1,11 +1,10 @@
-// import { PricingTierData } from "@/types/pricing";
 import { FAQItem } from "@/types/faqItems";
 
 export const TEST_MODE_ENABLED = ["true", "True", "TRUE"].includes(
-  process.env.NEXT_PUBLIC_TEST_MODE_ENABLED ?? "",
+  process.env.NEXT_PUBLIC_TEST_MODE_ENABLED ?? ""
 );
 
-export const CONTACT_EMAIL = "mivro@gmail.com";
+export const CONTACT_EMAIL = "contact@mivro.org";
 
 export const faqData: FAQItem[] = [
   {
@@ -34,12 +33,14 @@ export const faqData: FAQItem[] = [
       "You can choose to enable health data sharing for personalized recommendations and nutrient insights tailored to your specific needs. If this option is not enabled, the app will provide general recommendations based on standard daily nutritional guidelines for an average person.",
   },
   {
-    question: "Can I rely on the app’s AI for precise health recommendations and risk identification?",
+    question:
+      "Can I rely on the app’s AI for precise health recommendations and risk identification?",
     answer:
       "The AI model uses data and algorithms to provide general guidance on product recommendations and health risks. Accuracy improves with detailed input, but always seek professional medical advice for important health decisions.",
   },
   {
-    question: "What if a product I scanned is not recognized or provides incorrect information?",
+    question:
+      "What if a product I scanned is not recognized or provides incorrect information?",
     answer:
       "If a product isn't recognized or the information appears incorrect, you can submit it for review. We will verify and update the database accordingly. Soon, you'll also be able to add new products directly for verification.",
   },

@@ -24,14 +24,14 @@ export default async function AuthButton() {
             className="text-gray-800 transition duration-150 ease-in-out hover:text-primary-800"
             href={"/signin"}
           >
-            Sign in
+            Sign In
           </Link>
           <span className="text-gray-400 opacity-50">/</span>
           <Link
             className="text-gray-800 transition duration-150 ease-in-out hover:text-primary-800"
             href={"/signup"}
           >
-            Sign up
+            Sign Up
           </Link>
         </div>
       ) : (

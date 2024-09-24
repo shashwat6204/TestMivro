@@ -19,11 +19,15 @@ export default function TermsOfServiceComponent() {
             <div className="space-y-4">
               <div className="mb-8 text-gray-900">
                 <p>
-                  As an open source hobby project, we do not have a privacy
-                  policy at the moment. We are too busy having fun
-                  creating—staytuned! 🎨🔍
+                  <strong>Last Updated 29th September 2024</strong>
                 </p>
               </div>
+
+              <p>
+                As an open source hobby project, we don’t have Terms of Service
+                at the moment. We’re too busy having fun creating—stay tuned!
+                🎨🔍
+              </p>
             </div>
           </div>
         </div>
