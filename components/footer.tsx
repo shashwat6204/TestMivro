@@ -32,7 +32,7 @@ export default function Footer() {
                 </Link>
               </div>
               <div className="ml-3 mr-4 mt-4 text-sm text-gray-600 md:mt-0">
-                &copy; Mivro - All rights reserved.
+                &copy; 1Mind Labs - All rights reserved.
               </div>
             </div>
             {/* Right side - social links */}
@@ -59,20 +59,11 @@ export default function Footer() {
               </li>
               <li className="ml-4">
                 <Link
-                  href="/changelog"
+                  href="https://discord.gg/4CA58C7rkN"
                   className="flex items-center justify-center text-gray-800 transition duration-150 ease-in-out hover:text-gray-500"
-                  aria-label="About"
+                  aria-label="Discord"
                 >
-                  Changelog
-                </Link>
-              </li>
-              <li className="ml-4">
-                <Link
-                  href="/about"
-                  className="flex items-center justify-center text-gray-800 transition duration-150 ease-in-out hover:text-gray-500"
-                  aria-label="About"
-                >
-                  About
+                  Discord
                 </Link>
               </li>
             </ul>

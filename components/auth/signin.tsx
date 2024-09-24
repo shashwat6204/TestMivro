@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -72,7 +73,7 @@ export default function SignIn() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 pt-32 md:pb-20 md:pt-40">
           <div className="md:pb-17 mx-auto max-w-3xl pb-10 text-center text-3xl lg:text-4xl">
-            <h1 className="h1">Welcome back</h1>
+            <h1 className="h1">Welcome Back!</h1>
           </div>
 
           <div className="mx-auto max-w-sm">
@@ -193,7 +194,7 @@ export default function SignIn() {
                 href="/signup"
                 className="text-gray-800 transition duration-150 ease-in-out hover:text-primary-800"
               >
-                Sign up
+                Sign Up
               </Link>
             </div>
           </div>

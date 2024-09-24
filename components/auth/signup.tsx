@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
 import { signup, signinWithOAuth } from "@/app/(auth)/actions";
@@ -26,7 +27,7 @@ export default function SignUp() {
   const form = useForm<SignUpFormData>({
     resolver: zodResolver(signUpSchema),
     defaultValues: {
-      full_name: "",
+      name: "",
       email: "",
       password: "",
     },
@@ -40,7 +41,7 @@ export default function SignUp() {
 
     try {
       const formData = new FormData();
-      formData.append("full-name", data.full_name);
+      formData.append("name", data.name);
       formData.append("email", data.email);
       formData.append("password", data.password);
 
@@ -54,14 +55,14 @@ export default function SignUp() {
           router.push("/signin");
         } else {
           toast.success(
-            "Account created successfully. Please check your email to verify your account.",
+            "Account created successfully. Please check your email to verify your account."
           );
           form.reset();
         }
       } else {
         // Redirect to dashboard
         toast.info(
-          "An account with this email already exists, signing you in...",
+          "An account with this email already exists, signing you in..."
         );
         router.push("/dashboard");
       }
@@ -86,7 +87,7 @@ export default function SignUp() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 pt-32 md:pb-20 md:pt-40">
           <div className="md:pb-15 mx-auto max-w-3xl pb-10 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-            <h1 className="h1">MIVRO : Scan It. Know It.</h1>
+            <h1 className="h1">Create Your Account</h1>
           </div>
           <div className="mx-auto max-w-sm">
             <form onSubmit={(e) => handleOAuthSignUp("google")}>
@@ -133,14 +134,14 @@ export default function SignUp() {
                 className="space-y-4"
               >
                 <FormField
-                  name="full_name"
+                  name="name"
                   control={form.control}
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel htmlFor="full_name">Full Name</FormLabel>
+                      <FormLabel htmlFor="name">Name</FormLabel>
                       <FormControl>
                         <Input
-                          id="full_name"
+                          id="name"
                           placeholder="First and last name"
                           {...field}
                         />
@@ -188,15 +189,6 @@ export default function SignUp() {
                   )}
                 />
 
-                <div className="text-center text-sm text-gray-600">
-                  <Link
-                    href="/privacy"
-                    className="underline transition duration-150 ease-in-out hover:text-gray-700 hover:no-underline"
-                  >
-                    Privacy Policy
-                  </Link>
-                </div>
-
                 <Button
                   type="submit"
                   size="lg"
@@ -219,7 +211,7 @@ export default function SignUp() {
                 href="/signin"
                 className="text-gray-800 transition duration-150 ease-in-out hover:text-primary-800"
               >
-                Sign in
+                Sign In
               </Link>
             </div>
           </div>

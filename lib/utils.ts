@@ -9,38 +9,43 @@ type MetadataProps = {
   title?: string;
   description?: string;
   canonical: string;
-  ogImage?: string;
 };
 
 const defaultMetadata = {
-  title: "PearAI - Open Source AI Code Editor for Fast Development",
+  title: "Mivro: Scan It. Know It.",
   description:
-    "PearAI is an Open-source AI-powered code editor with features like AI chat, inline prompts, and debugging to accelerate your coding process.",
+    "Cross-platform app and web extension for personalized product profiling in food, drink, cosmetic, medicine, and pet food categories.",
 };
 
 export const constructMetadata = ({
   title,
   description = defaultMetadata.description,
   canonical = "/",
-  ogImage = "/images/og-image.png",
 }: MetadataProps) => {
   return {
-    metadataBase: new URL("https://trypear.ai/"),
-    title: title ? `${title} - pear.ai` : defaultMetadata.title,
+    metadataBase: new URL("https://mivro.org"),
+    title: title ? `${title} - Mivro` : defaultMetadata.title,
     description,
-    keywords: ["code editor", "ai code editor", "ai", "pearai"],
+    keywords: ["mivro", "ai barcode scanner", "product analyser"],
     alternates: {
       canonical,
     },
-
     authors: [
       {
-        name: "Nang",
-        url: "https://github.com/nang-dev",
+        name: "Areeb Ahmed",
+        url: "https://github.com/areebahmeddd",
       },
       {
-        name: "Duke Pan",
-        url: "https://github.com/Fryingpannn",
+        name: "Shivansh Karan",
+        url: "https://github.com/SpaceTesla",
+      },
+      {
+        name: "Shashwat Kumar",
+        url: "https://github.com/shashwat6204",
+      },
+      {
+        name: "Rishi Chirchi",
+        url: "https://github.com/rishichirchi",
       },
     ],
     openGraph: {
@@ -48,38 +53,14 @@ export const constructMetadata = ({
       description,
       type: "website",
       url: canonical,
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: "OG Image",
-        },
-      ],
     },
-
-    // --- will add this once we get the logo ---
-    // icons: {
-    //   icon: "/icon.png",
-    //   shortcut: "/icon.png",
-    //   apple: "/icon.png",
-    // },
-
-    // --- need a twitter handle for this ---
-    // twitter: {
-    //   title,
-    //   description,
-    //   creator: "@trypearai",
-    //   site: "trypear.ai",
-    //   card: "summary_large_image",
-    // },
   };
 };
 
 export const getURL = () => {
   let url =
     process?.env?.NEXT_PUBLIC_SITE_URL ??
-    process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
+    process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel
     "http://localhost:3000";
 
   // Include `https://` when not localhost.

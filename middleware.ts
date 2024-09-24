@@ -3,13 +3,13 @@ import { updateSession } from "./utils/supabase/middleware";
 import { createClient } from "@/utils/supabase/server";
 
 export async function middleware(request: NextRequest) {
-  // update the session as before
+  // Update the session as before
   const response = await updateSession(request);
 
   // Check if the route should be protected
   const protectedPaths = ["/api"];
   const isProtectedRoute = protectedPaths.some((path) =>
-    request.nextUrl.pathname.startsWith(path),
+    request.nextUrl.pathname.startsWith(path)
   );
 
   if (isProtectedRoute) {
@@ -19,12 +19,12 @@ export async function middleware(request: NextRequest) {
     } = await supabase.auth.getSession();
 
     if (!session) {
-      // redirect to login page if no session
+      // Redirect to login page if no session
       return NextResponse.redirect(new URL("/signin", request.url));
     }
   }
 
-  // if everything fine return response from updateSession
+  // If everything fine return response from updateSession
   return response;
 }
 export const config = {

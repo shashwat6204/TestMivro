@@ -1,14 +1,15 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
-import GroupPhoto1 from "@/public/images/group1.jpg"; // Adjust the path as needed
-import GroupPhoto2 from "@/public/images/group2.jpg"; // Adjust the path as needed
+import TeamPhoto1 from "@/public/images/team1.jpg";
+import TeamPhoto2 from "@/public/images/team2.jpg";
 
 const Team: React.FC = () => {
   return (
     <section className="flex flex-col items-center p-8">
       <header className="mb-8 mt-16 text-center">
-      <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold">
           Meet{" "}
           <span className="relative">
             <span className="relative z-10 text-primary-700">Our Team</span>
@@ -22,24 +23,24 @@ const Team: React.FC = () => {
           </span>
         </h1>
       </header>
-      <div className="mb-16 w-full max-w-4xl rounded-lg border border-gray-300 p-4">
+      <div className="w-full max-w-4xl rounded-lg border border-gray-300 p-4">
         <div className="flex justify-between gap-4">
           <div className="flex-1 text-center">
             <Image
-              src={GroupPhoto1}
-              alt="Group 1"
+              src={TeamPhoto1}
+              alt="Team 1"
               className="mb-4 h-auto w-full rounded-lg"
             />
           </div>
           <div className="flex-1 text-center">
             <Image
-              src={GroupPhoto2}
-              alt="Group 2"
+              src={TeamPhoto2}
+              alt="Team 2"
               className="mb-4 h-auto w-full rounded-lg"
             />
           </div>
         </div>
-        <p className="mt-4 text-left text-gray-700">
+        <p className="mt-4 text-justify text-gray-700">
           We’re a group of computer science undergraduate students united by a
           shared passion for open source and all things tech. Our story started
           with a simple YouTube video on a “Top API Every Developer Should Know
@@ -48,7 +49,7 @@ const Team: React.FC = () => {
           fueled by our enthusiasm for experimenting, building, and solving
           real-world problems.
         </p>
-        <p className="mt-2 text-left text-gray-700">
+        <p className="mt-2 text-justify text-gray-700">
           We decided to make our project open-source because we believe in the
           power of collaboration and giving back to the developer community. Our
           goal is to create something meaningful that has a positive impact on a
@@ -58,7 +59,7 @@ const Team: React.FC = () => {
           innovating every step of the way :)
         </p>
         <p className="mt-2 text-center text-gray-700">
-        -  Areeb, Shivansh, Shashwat, Rishi, Ravikant, Anish
+          - Areeb, Shivansh, Shashwat, Rishi, Ravikant, Anish
         </p>
       </div>
     </section>

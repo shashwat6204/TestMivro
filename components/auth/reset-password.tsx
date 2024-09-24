@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
 import { resetPassword } from "@/app/(auth)/actions";
@@ -45,7 +46,7 @@ export default function ResetPassword() {
         setErrorMessage(response.error);
       } else {
         setSuccessMessage(
-          "Password reset instructions have been sent to your email.",
+          "Password reset instructions have been sent to your email."
         );
         form.reset();
       }

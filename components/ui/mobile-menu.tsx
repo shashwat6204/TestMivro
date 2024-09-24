@@ -48,11 +48,7 @@ export default function MobileMenu({
     };
   }, [isOpen]);
 
-  const navLinks = [
-    { label: "Pricing", path: "/pricing" },
-    { label: "Priority Waitlist", path: "/priority-waitlist" },
-    { label: "FAQ", path: "/faq" },
-  ];
+  const navLinks = [{ label: "FAQ", path: "/faq" }];
 
   return (
     <div className="md:hidden">
@@ -64,17 +60,23 @@ export default function MobileMenu({
       >
         <div className="relative">
           <Menu
-            className={`h-6 w-6 transition-opacity duration-300 ease-in-out ${isOpen ? "opacity-0" : "opacity-100"}`}
+            className={`h-6 w-6 transition-opacity duration-300 ease-in-out ${
+              isOpen ? "opacity-0" : "opacity-100"
+            }`}
           />
           <X
-            className={`absolute left-0 top-0 h-6 w-6 transition-opacity duration-300 ease-in-out ${isOpen ? "opacity-100" : "opacity-0"}`}
+            className={`absolute left-0 top-0 h-6 w-6 transition-opacity duration-300 ease-in-out ${
+              isOpen ? "opacity-100" : "opacity-0"
+            }`}
           />
         </div>
       </button>
 
       <div
         ref={menuRef}
-        className={`absolute left-0 top-full z-20 w-full border-b border-gray-400/20 bg-gray-50 transition-all duration-300 ease-in-out ${isOpen ? "visible opacity-100" : "invisible opacity-0"} `}
+        className={`absolute left-0 top-full z-20 w-full border-b border-gray-400/20 bg-gray-50 transition-all duration-300 ease-in-out ${
+          isOpen ? "visible opacity-100" : "invisible opacity-0"
+        } `}
       >
         <ul className="px-4 py-2">
           {navLinks.map((link) => (
@@ -94,12 +96,12 @@ export default function MobileMenu({
             <div className="flex items-center justify-center space-x-2.5">
               <Button asChild className="w-full rounded-full">
                 <Link onClick={() => setIsOpen(false)} href={"/signin"}>
-                  Sign in
+                  Sign In
                 </Link>
               </Button>
               <Button asChild className="w-full" variant="outline">
                 <Link onClick={() => setIsOpen(false)} href={"/signup"}>
-                  Sign up
+                  Sign Up
                 </Link>
               </Button>
             </div>
@@ -117,7 +119,7 @@ export default function MobileMenu({
                 className="w-full"
               >
                 <form action={handleSignOut}>
-                  <button className="w-full">Sign out</button>
+                  <button className="w-full">Sign Out</button>
                 </form>
               </Button>
             </div>

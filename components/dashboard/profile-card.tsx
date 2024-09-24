@@ -24,12 +24,12 @@ export default function ProfileCard({ user }: ProfileCardProps) {
         <Avatar className="h-16 w-16">
           <AvatarImage src={user.user_metadata.avatar_url} alt="User Avatar" />
           <AvatarFallback>
-            {user?.user_metadata.full_name?.[0] || user?.email?.[0] || "U"}
+            {user?.user_metadata.name?.[0] || user?.email?.[0] || "U"}
           </AvatarFallback>
         </Avatar>
         <div>
           <p className="text-lg font-medium">
-            {user?.user_metadata.full_name || "User"}
+            {user?.user_metadata.name || "User"}
           </p>
           <p className="text-muted-foreground">{user?.email}</p>
         </div>

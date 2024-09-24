@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
 
-// next.config.js
 const nextConfiguration = {
   ...nextConfig,
   webpack(config) {

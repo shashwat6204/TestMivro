@@ -12,7 +12,7 @@ type FreeTrialCardProps = {
   openAppQueryParams: string;
 };
 
-const DEFAULT_OPEN_APP_CALLBACK = "pearai://pearai.pearai/auth";
+const DEFAULT_OPEN_APP_CALLBACK = "mivro://mivro.mivro/auth";
 
 export default function FreeTrialCard({
   usage,
@@ -65,7 +65,7 @@ export default function FreeTrialCard({
                 <Link
                   href={DEFAULT_OPEN_APP_CALLBACK + "?" + openAppQueryParams}
                 >
-                  Open PearAI
+                  Open Mivro
                 </Link>
               </Button>
             </div>

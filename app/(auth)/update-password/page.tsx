@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Update password",
+  title: "Update Password",
   description: "Update your account password",
   canonical: "/update-password",
 });

@@ -4,7 +4,7 @@ import { Metadata } from "next/types";
 
 export const metadata: Metadata = constructMetadata({
   title: "Team",
-  description: "About Team",
+  description: "The team behind Mivro",
   canonical: "/team",
 });
 

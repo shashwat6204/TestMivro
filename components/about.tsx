@@ -11,10 +11,10 @@ type VideoCardProps = VideoData;
 
 const videoData: VideoData[] = [
   {
-    src: "https://www.youtube.com/embed/ToXUq-NSkUg",
-    title: "Barcode Scanning Feature Overview",
+    src: "https://youtube.com/embed/ToXUq-NSkUg",
+    title: "Project Overview",
     description:
-      "This video showcases the app's barcode scanning feature, allowing users to scan foods, drinks, cosmetics, medicines, and pet foods. Detailed ingredient information and AI-powered recommendations are provided.",
+      "A brief overview of the project, its features, and how it can help you make healthier choices in your daily life.",
   },
 ];
 
@@ -48,28 +48,24 @@ const AboutComponent: React.FC = () => {
         </p>
       </div>
       <div className="mt-10 flex flex-col items-center justify-center">
-        <p className="text-s text-gray-500">Key Features</p>
+        <p className="text-s text-gray-500 font-bold">Key Features</p>
 
         <div className="m-4 mt-2 flex max-w-4xl flex-wrap items-center justify-center gap-4">
           <CardInfo
-            title="Barcode Scanning for Foods, Drinks, and More"
-            info="Detailed description about how this feature helps with scanning food barcodes."
+            title="Search Engine"
+            info="Easily find products without barcode scanning, with upcoming support for image and live product recognition."
           />
           <CardInfo
-            title="Ingredient and Nutritional Information"
-            info="Comprehensive information about ingredients and nutrition details."
+            title="Meal Tracker"
+            info="Monitor your daily nutritional intake by scanning product barcodes, allowing you to easily track and manage your meals."
           />
           <CardInfo
-            title="AI-Powered Health Risk Assessment"
-            info="Leverage AI to assess potential health risks based on your food choices."
+            title="Marketplace"
+            info="Discover and purchase healthier alternatives from our trusted partners."
           />
           <CardInfo
-            title="Recipe Chatbot for Personalized Recommendations"
-            info="Interact with a chatbot to get customized recipe suggestions."
-          />
-          <CardInfo
-            title="Seamless Browser Extension Integration"
-            info="Easy integration with your browser for quick access."
+            title="Browser Extension"
+            info="Integrate app features seamlessly into your online shopping experience."
           />
         </div>
       </div>
@@ -106,7 +102,7 @@ const CardInfo: React.FC<{ title: string; info: string }> = ({
 
       {/* Hidden information (revealed on hover) */}
       <div
-        className="absolute inset-0 flex items-center justify-center rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="absolute inset-0 flex items-center p-2 justify-center rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
           border: "1px solid rgba(20, 189, 149, 0.35)",
           background: "rgba(20, 189, 149, 0.03)",

@@ -2,14 +2,10 @@
 import { User } from "@supabase/supabase-js";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-//import { Subscription } from "@/types/subscription";
 import { toast } from "sonner";
 import ProfileCard from "@/components/dashboard/profile-card";
-//import SubscriptionCard from "@/components/dashboard/subscription-card";
-//import FreeTrialCard from "@/components/dashboard/freetrial-card";
 
 type DashboardPageProps = {
-  // subscription: Subscription | null;
   openAppQueryParams: string;
   user: User;
 };
@@ -21,7 +17,6 @@ type UsageType = {
 };
 
 export default function DashboardPage({
-  // subscription,
   openAppQueryParams,
   user,
 }: DashboardPageProps) {

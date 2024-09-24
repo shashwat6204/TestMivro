@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import * as ProgressPrimitive from "@radix-ui/react-progress";
-
 import { cn } from "@/lib/utils";
 
 interface CustomProgressProps
@@ -17,7 +16,7 @@ const Progress = React.forwardRef<
     ref={ref}
     className={cn(
       "bg-secondary relative h-4 w-full overflow-hidden rounded-full",
-      className,
+      className
     )}
     {...props}
   >

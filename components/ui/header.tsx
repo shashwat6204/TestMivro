@@ -1,35 +1,10 @@
-import Link from "next/link";
 import MobileMenu from "./mobile-menu";
 import AuthButton from "./authbutton";
-// import { useTheme } from "next-themes";
-// import PearHeroLogo from "@/components/ui/PearHeroLogo.svg";
-// import PearDarkHeroLogo from "@/components/ui/PearDarkHeroLogo.svg";
 import DarkModeToggle from "./darkmode-toggle";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
-import { ExternalLink } from "lucide-react";
 import { Search } from "lucide-react";
 import Navigation from "./navLink";
-
-// const HeroTitle = ({ theme }: { theme: string }) => (
-//   <>
-//     <div className="hidden items-start sm:inline-block">
-//       {theme === "dark" ? (
-//         <PearDarkHeroLogo
-//           width="26"
-//           alt="PearAI Logo"
-//           className="mb-4 mr-2 inline-flex"
-//         />
-//       ) : (
-//         <PearHeroLogo
-//           width="26"
-//           alt="PearAI Logo"
-//           className="mb-4 mr-2 inline-flex"
-//         />
-//       )}
-//     </div>
-//   </>
-// );
 
 export default async function Header() {
   const supabase = createClient();
@@ -61,7 +36,7 @@ export default async function Header() {
                 <Navigation />
               </div>
 
-              {/* Clean Search Bar */}
+              {/* Search Bar */}
               <div className="relative ml-auto w-full max-w-lg">
                 <input
                   type="text"
@@ -84,7 +59,7 @@ export default async function Header() {
                 id="button__divider"
               ></span>
 
-              {/* DARK/LIGHT MODE TOGGLE */}
+              {/* DARK/LIGHT Mode Toggle */}
               <DarkModeToggle />
 
               <span

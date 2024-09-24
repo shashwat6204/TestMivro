@@ -5,7 +5,7 @@ import { constructMetadata } from "@/lib/utils";
 
 export const metadata: Metadata = constructMetadata({
   title: "Change Logs",
-  description: "The change logs for PearAI.",
+  description: "The change logs for Mivro",
   canonical: "/changelog",
 });
 

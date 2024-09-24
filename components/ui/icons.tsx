@@ -60,7 +60,6 @@ export const GoogleLogoColored: FC<ComponentProps<"svg">> = (props) => (
 export const GitHubLogo: FC<ComponentProps<"svg">> = (props) => (
   <svg
     aria-hidden="true"
-    // className="text-white h-4 w-4 shrink-0"
     viewBox="0 0 16 16"
     width="24"
     {...props}

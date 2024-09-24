@@ -61,7 +61,7 @@ export default function Verification() {
                   onClick={handleClick}
                   className="w-full bg-primary-700 text-white-main hover:bg-primary-800 hover:shadow-sm"
                 >
-                  Sign in
+                  Sign In
                 </Button>
                 <div className="mt-4 text-gray-400">
                   Make sure to check your spam folder if you don&apos;t see it!
