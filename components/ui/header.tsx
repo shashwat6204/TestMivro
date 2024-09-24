@@ -59,7 +59,7 @@ export default async function Header() {
                 id="button__divider"
               ></span>
 
-              {/* DARK/LIGHT MODE TOGGLE */}
+              {/* DARK/LIGHT Mode Toggle */}
               <DarkModeToggle />
 
               <span
